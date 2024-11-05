@@ -3,7 +3,7 @@
 .form-item {
   &-input {
     &-otp {
-      @include flex-center;
+      @include flex(row, center, center);
 
       .ant-input {
         border-radius: 18px;
@@ -23,7 +23,7 @@
 
         &:focus,
         &:hover {
-          border-color: $gray3;
+          border-color: $gray300;
           box-shadow: none;
         }
 
@@ -34,7 +34,7 @@
             border-right: none;
             padding-right: 0;
             padding-left: 18px;
-            border-color: $gray3;
+            border-color: $gray300;
 
             color: $text-primary;
             font-weight: 600;

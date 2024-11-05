@@ -17,6 +17,7 @@ import {
   InputFormItem,
   PhoneFormItem,
   SelectFormItem,
+  UploadFormItem,
 } from 'src/components/form';
 import { formGutter } from 'src/constants/form';
 import { colors } from 'src/constants/theme';
@@ -193,6 +194,7 @@ function Help() {
               label="Select"
             />
             <CheckboxFormItem label="Checkbox" />
+            <UploadFormItem label="Upload" />
           </Row>
         </Form>
       </CustomCard>

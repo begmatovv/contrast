@@ -1,7 +1,7 @@
 @import 'src/styles/variables.scss';
 
 .common_status {
-  @include flex-center;
+  @include flex(row, center, center);
   display: inline-flex;
   padding: 10px 14px;
   border-radius: 50px;

@@ -1,7 +1,7 @@
-import AntdProvider from './provider/antd';
-import AosProvider from './provider/aos';
-import ReduxProvider from './provider/redux';
-import RouterProvider from './provider/router';
+import AntdProvider from './lib/antd';
+import AosProvider from './lib/aos';
+import ReduxProvider from './lib/redux';
+import RouterProvider from './lib/router';
 
 function App() {
   return (
