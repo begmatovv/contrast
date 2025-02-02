@@ -3,7 +3,7 @@ import doc from '/src/assets/img/doctor.png';
 import user from '/src/assets/img/user.png';
 const HomeReviews = () => {
   return (
-    <div className={styles.review}>
+    <div id='reviews' className={styles.review}>
       <div className="container">
         <h2 className={styles.title}>Мнение экспертов и пациентов</h2>
         <div className={styles.reviewCards}>

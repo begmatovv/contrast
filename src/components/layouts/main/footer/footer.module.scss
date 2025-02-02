@@ -57,13 +57,10 @@ hr {
   padding-left: 0;
 }
 
-/* Responsive Design */
-
 @media (max-width: 768px) {
   .top {
-    flex-direction: column; // Stack the items vertically
-    align-items: center;
     text-align: center;
+    flex-direction: column;
   }
 
   .bottom {
@@ -73,7 +70,6 @@ hr {
   }
 
   .social {
-    flex-direction: column; // Stack social icons vertically
     gap: 15px;
   }
 
@@ -82,7 +78,9 @@ hr {
     padding-left: 0;
   }
 
-  .address, .phone, .email {
+  .address,
+  .phone,
+  .email {
     margin-bottom: 20px; // Add space between the blocks
   }
 }

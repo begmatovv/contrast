@@ -5,7 +5,7 @@ import tick from '/src/assets/img/shield-tick.png';
 import { CustomButton } from 'src/components/common';
 const HomeSecurity = () => {
   return (
-    <div className="container">
+    <div id="clinical-research" className="container">
       <div className={styles.security}>
         <div className={styles.content}>
           <h2 className={styles.title}>Ваша безопасность — наш приоритет</h2>

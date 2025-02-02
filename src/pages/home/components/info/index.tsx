@@ -3,7 +3,7 @@ import img1 from '/src/assets/img/card.png';
 import star from '/src/assets/img/star.png';
 const HomeInfo = () => {
   return (
-    <div className="container">
+    <div id="how-it-works" className="container">
       <div className={styles.info}>
         <div className={styles.infoHeader}>
           <img src={star} alt="" />

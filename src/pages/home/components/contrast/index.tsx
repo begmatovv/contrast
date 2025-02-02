@@ -5,7 +5,7 @@ import img3 from '/src/assets/img/contrast3.png';
 
 const HomeContrastAgents = () => {
   return (
-    <div className={`container ${styles.contrastAgents}`}>
+    <div id="about" className={`container ${styles.contrastAgents}`}>
       <h2 className={styles.title}>О контрастных препаратах</h2>
       <p className={styles.text}>
         Контрастные препараты — это специализированные медицинские средства,
@@ -15,13 +15,18 @@ const HomeContrastAgents = () => {
         принимать обоснованные решения.
       </p>
       <div className={styles.imgContainer}>
-        <img src="/src/assets/img/medicineBlue.png" alt="" width={618}/>
-        <img src="/src/assets/img/medicineWhite.png" alt="" width={618}/>
+        <img src="/src/assets/img/medicineBlue.png" alt="" width={618} />
+        <img src="/src/assets/img/medicineWhite.png" alt="" width={618} />
       </div>
       <div className={styles.featureCards}>
         {featureCards.map((item, index) => (
           <div className={styles.featureCard} key={index}>
-            <img src={Object.values(item.img)[0]} alt="" width={62} height={62} />
+            <img
+              src={Object.values(item.img)[0]}
+              alt=""
+              width={62}
+              height={62}
+            />
             <p>{item.title}</p>
           </div>
         ))}
@@ -31,8 +36,6 @@ const HomeContrastAgents = () => {
 };
 
 export default HomeContrastAgents;
-
-
 
 const featureCards = [
   {

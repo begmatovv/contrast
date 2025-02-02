@@ -18,10 +18,10 @@ const HomeMore = () => {
             <div className={styles.btnwrap}>
               {' '}
               <CustomButton bg="#00707B" textColor="white">
-                Связаться с нами{' '}
+                Связаться{' '}
               </CustomButton>
               <CustomButton bg="white" textColor="#00707B">
-                Скачать руководство по безопасности{' '}
+                Руководство{' '}
               </CustomButton>
             </div>
           </div>
@@ -37,7 +37,7 @@ const HomeMore = () => {
               Подписаться
             </CustomButton>
           </div>
-          <img src={img2} alt="" width={334} height={181} />
+          <img src={img2} alt=""  />
         </div>
       </div>
     </div>

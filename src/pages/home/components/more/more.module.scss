@@ -41,6 +41,10 @@
   background-color: $primary;
   display: flex;
   align-items: center;
+  img {
+    max-width: 334px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -74,6 +78,9 @@
     img {
       margin-bottom: 32px;
     }
+  }
+  .btnwrap {
+    flex-wrap: wrap;
   }
   .knowMore {
     padding: 0;

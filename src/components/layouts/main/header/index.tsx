@@ -1,32 +1,50 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from 'src/components/layouts/main/header/header.module.scss';
+import styles from './header.module.scss';
 import useHeader from './useHeader';
 import { CustomButton } from 'src/components/common';
-import { colors } from 'src/constants/theme';
+import btnDropdown from 'src/assets/img/burger.png';
+import { LogoBlue } from 'src/assets/svg';
+
 const MainLayoutHeader = () => {
-  const { links, isDropdownOpen, setIsDropdownOpen, toggleDropdown } =
-    useHeader();
+  const { links, isDropdownOpen, toggleDropdown } = useHeader();
+
   return (
     <div className={styles.container}>
-      {' '}
       <div className={styles.header}>
         <div className={styles.logo}>
-          <img src="" alt="logo" />
+          <LogoBlue />
         </div>
-        <ul className={styles.menu}>
+
+        {/* Orqa fonni blur qilish */}
+        <div
+          className={`${styles.overlay} ${isDropdownOpen ? styles.active : ''}`}
+          onClick={() => toggleDropdown()}
+        ></div>
+
+        {/* Mobil menyu tugmasi */}
+        <button className={styles.menuButton} onClick={() => toggleDropdown()}>
+          <img src={btnDropdown} alt="Меню" />
+        </button>
+
+        {/* Menyu */}
+        <ul className={`${styles.menu} ${isDropdownOpen ? styles.open : ''}`}>
           {links.map((link) => (
             <li key={link.href}>
-              <Link className={styles.item} to={link.href}>
+              <a
+                href={`#${link.href}`}
+                className={styles.item}
+                onClick={() => toggleDropdown()}
+              >
                 {link.label}
-              </Link>
+              </a>
             </li>
           ))}
+
+          <CustomButton textColor="white" bg="#00707B">
+            Связаться
+          </CustomButton>
         </ul>
-        {/* <div className={styles.btn}>Связаться с экспертом</div>
-         */}
-        <CustomButton textColor="white" bg="#00707B">
-          Связаться
-        </CustomButton>
       </div>
     </div>
   );
