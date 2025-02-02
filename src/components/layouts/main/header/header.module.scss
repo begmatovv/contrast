@@ -24,13 +24,11 @@
 .menu {
   display: flex;
   align-items: center;
-  gap: 30px;
-
+  gap: 10px;
   li {
     font-size: 20px;
     font-weight: 500;
     list-style-type: none;
-
     .item {
       color: $primary-text;
     }

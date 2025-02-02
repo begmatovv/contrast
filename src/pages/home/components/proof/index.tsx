@@ -1,14 +1,31 @@
+import { useTranslation } from 'react-i18next';
 import styles from './proof.module.scss';
-import proofImg from '/src/assets/img/proofImg.png';
+import { ScreeningIcon } from 'src/assets/svg';
 const HomeProof = () => {
+  const { t } = useTranslation();
+
+  const proofCards = [
+    {
+      title: t('proof.card_title1'),
+      text: t('proof.card_text1'),
+    },
+    {
+      title: t('proof.card_title2'),
+      text: t('proof.card_text2'),
+    },
+    {
+      title: t('proof.card_title3'),
+      text: t('proof.card_text3'),
+    },
+  ];
   return (
     <div className={styles.proof}>
       <div className="container">
-        <h2 className={styles.title}>Доказанная эффективность в реальных условиях</h2>
+        <h2 className={styles.title}>{t('proof.title')}</h2>
         <div className={styles.proofCards}>
           {proofCards.map((item, index) => (
             <div className={styles.proofCard} key={index}>
-              <img src={proofImg} alt="" />
+              <ScreeningIcon />
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </div>
@@ -20,17 +37,3 @@ const HomeProof = () => {
 };
 
 export default HomeProof;
-const proofCards = [
-  {
-    title: 'Успех в обнаружении опухолей',
-    text: 'Клинические исследования показали 90%-е улучшение обнаружения небольших опухолей с использованием контрастных препаратов при КТ.',
-  },
-  {
-    title: 'Точность в кардиологии',
-    text: 'Контрастные препараты на основе гадолиния повысили точность диагностики заболеваний сердца на 87%.',
-  },
-  {
-    title: 'Визуализация ЖКТ',
-    text: 'Сульфат бария выявил 95% случаев закупорки пищеварительной системы, что позволило провести спасительное лечение.',
-  },
-];

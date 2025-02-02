@@ -1,24 +1,37 @@
+import { useTranslation } from 'react-i18next';
 import styles from './info.module.scss';
-import img1 from '/src/assets/img/card.png';
 import star from '/src/assets/img/star.png';
+import { CreditCard } from 'src/assets/svg';
 const HomeInfo = () => {
+  const { t } = useTranslation();
+  const infoCards = [
+    {
+      title: t('feature.card_title1'),
+      text: t('feature.card_text1'),
+    },
+    {
+      title: t('feature.card_title2'),
+      text: t('feature.card_text2'),
+    },
+    {
+      title: t('feature.card_title3'),
+      text: t('feature.card_text3'),
+    },
+  ];
   return (
     <div id="how-it-works" className="container">
       <div className={styles.info}>
         <div className={styles.infoHeader}>
           <img src={star} alt="" />
-          <span className={styles.subtitle}>Точность в каждой капле</span>
+          <span className={styles.subtitle}>{t('feature.subtitle')}</span>
         </div>
-        <h2 className={styles.title}>Как это работает</h2>
-        <p className={styles.text}>
-          Контрастные препараты изменяют восприятие тканей визуализирующими
-          устройствами:
-        </p>
+        <h2 className={styles.title}>{t('feature.title')}</h2>
+        <p className={styles.text}>{t('feature.desc')}</p>
         <div className={styles.infoCards}>
           {infoCards.map((item, index) => (
             <div className={styles.infoCard} key={index}>
               <div className={styles.infoCardHeader}>
-                <img src={img1} alt="" />
+                <CreditCard />
                 <h3>{item.title}</h3>
               </div>
               <p>{item.text}</p>
@@ -31,18 +44,3 @@ const HomeInfo = () => {
 };
 
 export default HomeInfo;
-
-const infoCards = [
-  {
-    title: 'Препараты на основе йода',
-    text: 'Усиливают рентгеновские и КТ-изображения, поглощая рентгеновские лучи в целевых зонах.',
-  },
-  {
-    title: 'Препараты на основе гадолиния',
-    text: 'Улучшают МРТ-сканирование, подчеркивая мягкие ткани.',
-  },
-  {
-    title: 'Сульфат бария',
-    text: 'Обеспечивает видимость пищеварительной системы на рентгене или флюороскопии.',
-  },
-];

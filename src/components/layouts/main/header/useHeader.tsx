@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function useHeader() {
+  const { t } = useTranslation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = (id?: string) => {
@@ -12,15 +14,15 @@ function useHeader() {
         if (section) {
           section.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      }, 300); // Animatsiya tugashini kutish
+      }, 300); 
     }
   };
 
   const links = [
-    { label: 'О контрастных препаратах', href: 'about' },
-    { label: 'Как это работает', href: 'how-it-works' },
-    { label: 'Клинические исследования', href: 'clinical-research' },
-    { label: 'Отзывы', href: 'reviews' },
+    { label: t('header.title1'), href: 'about' },
+    { label: t('header.title2'), href: 'how-it-works' },
+    { label: t('header.title3'), href: 'clinical-research' },
+    { label: t('header.title4'), href: 'reviews' },
   ];
 
   return {

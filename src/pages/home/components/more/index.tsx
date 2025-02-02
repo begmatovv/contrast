@@ -3,7 +3,9 @@ import styles from './more.module.scss';
 import img from '/src/assets/img/phoneMore.png';
 import img2 from '/src/assets/img/socialMedia.png';
 import { CustomButton } from 'src/components/common';
+import { useTranslation } from 'react-i18next';
 const HomeMore = () => {
+  const { t } = useTranslation();
   return (
     <div className="container">
       {' '}
@@ -11,17 +13,15 @@ const HomeMore = () => {
         <div className={styles.moreContainer}>
           {' '}
           <div className={styles.knowMore}>
-            <h2 className={styles.title}>Хотите узнать больше?</h2>
-            <p className={styles.text}>
-              Сделайте шаг к лучшей визуализации и диагностике.
-            </p>
+            <h2 className={styles.title}>{t('more.title')}</h2>
+            <p className={styles.text}>{t('more.desc')}</p>
             <div className={styles.btnwrap}>
               {' '}
               <CustomButton bg="#00707B" textColor="white">
-                Связаться{' '}
+                {t('header.btn')}
               </CustomButton>
               <CustomButton bg="white" textColor="#00707B">
-                Руководство{' '}
+                {t('hero.btn2')}
               </CustomButton>
             </div>
           </div>
@@ -29,15 +29,12 @@ const HomeMore = () => {
         </div>
         <div className={styles.socialMedia}>
           <div className={styles.knowMore}>
-            <p className={styles.text}>
-              Подпишитесь на нашу рассылку, чтобы быть в курсе последних
-              новостей о контрастных препаратах и технологиях визуализации.
-            </p>
+            <p className={styles.text}>{t('more.desc2')}</p>
             <CustomButton textColor="white" bg="#00707B">
-              Подписаться
+              {t('more.btn4')}
             </CustomButton>
           </div>
-          <img src={img2} alt=""  />
+          <img src={img2} alt="" />
         </div>
       </div>
     </div>

@@ -2,9 +2,14 @@ import { card, finance, tick } from 'src/assets/svg';
 import styles from './hero.module.scss';
 import herostar from 'src/assets/img/herostar.png';
 import { CustomButton } from 'src/components/common';
-import ButtonPrimary from 'src/components/common/buttonPrimary';
-import ButtonSecondary from 'src/components/common/buttonSecondary';
+import { useTranslation } from 'react-i18next';
 const HomeHero = () => {
+  const { t } = useTranslation();
+  const features = [
+    { title: t('hero.feature1'), icon: card },
+    { title: t('hero.feature2'), icon: tick },
+    { title: t('hero.feature3'), icon: finance },
+  ];
   return (
     <div className={styles.herowrap}>
       <div className={styles.hero}>
@@ -12,16 +17,10 @@ const HomeHero = () => {
           <div className={styles.herocontainer}>
             <div className={styles.herostar}>
               <img src={herostar} alt="" width={46} height={46} />
-              <span>Видеть яснее</span>
+              <span>{t('hero.subtitle')}</span>
             </div>
-            <h3 className={styles.title}>
-              Передовые методы визуализации с использованием контрастных
-              препаратов Революция в диагностической визуализации{' '}
-            </h3>
-            <p className={styles.text}>
-              Улучшите медицинскую визуализацию для повышения эффективности
-              лечения.
-            </p>
+            <h3 className={styles.title}>{t('hero.title1')}</h3>
+            <p className={styles.text}>{t('hero.desc')}</p>
             <div className={styles.features}>
               {features.map((item, index) => (
                 <div className={styles.feature} key={index}>
@@ -31,11 +30,16 @@ const HomeHero = () => {
               ))}
             </div>
             <div className={styles.buttons}>
-              <CustomButton bg="white" textColor="#00707B" defaultHoverBg='#00707B' defaultHoverColor='white'>
-                Узнать больше
+              <CustomButton
+                bg="white"
+                textColor="#00707B"
+                defaultHoverBg="#00707B"
+                defaultHoverColor="white"
+              >
+                {t('hero.btn')}
               </CustomButton>
               <CustomButton bg="#00707B" textColor="white">
-                Связаться с экспертом
+                {t('hero.btn2')}
               </CustomButton>
             </div>
           </div>
@@ -46,8 +50,3 @@ const HomeHero = () => {
 };
 
 export default HomeHero;
-const features = [
-  { title: 'безопасность', icon: card },
-  { title: 'точность', icon: tick },
-  { title: 'четкость', icon: finance },
-];

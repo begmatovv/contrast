@@ -1,14 +1,13 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import styles from './header.module.scss';
 import useHeader from './useHeader';
 import { CustomButton } from 'src/components/common';
 import btnDropdown from 'src/assets/img/burger.png';
 import { LogoBlue, LogoWhite } from 'src/assets/svg';
-
+import LanguageButton from './langButton';
+import { useTranslation } from 'react-i18next';
 const MainLayoutHeader = () => {
   const { links, isDropdownOpen, toggleDropdown } = useHeader();
-
+  const { t } = useTranslation();
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -19,7 +18,6 @@ const MainLayoutHeader = () => {
           <LogoWhite />
         </div>
 
-        {/* Orqa fonni blur qilish */}
         <div
           className={`${styles.overlay} ${isDropdownOpen ? styles.active : ''}`}
           onClick={() => toggleDropdown()}
@@ -43,9 +41,9 @@ const MainLayoutHeader = () => {
               </a>
             </li>
           ))}
-
+          <LanguageButton />
           <CustomButton textColor="white" bg="#00707B">
-            Связаться
+            {t('header.btn')}
           </CustomButton>
         </ul>
       </div>

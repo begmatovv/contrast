@@ -1,25 +1,48 @@
-import ButtonPrimary from 'src/components/common/buttonPrimary';
 import styles from './security.module.scss';
 import security from '/src/assets/img/security.png';
-import tick from '/src/assets/img/shield-tick.png';
 import { CustomButton } from 'src/components/common';
+import { useTranslation } from 'react-i18next';
+import { ShieldTick } from 'src/assets/svg';
 const HomeSecurity = () => {
+  const { t } = useTranslation();
+  const securityCards = [
+    {
+      title: t('security.card_title1'),
+      text: t('security.card_text1'),
+    },
+    {
+      title: t('security.card_title2'),
+      text: t('security.card_text2'),
+    },
+    {
+      title: t('security.card_title3'),
+      text: t('security.card_text3'),
+    },
+    {
+      title: t('security.card_title4'),
+      text: t('security.card_text4'),
+    },
+    {
+      title: t('security.card_title5'),
+      text: t('security.card_text5'),
+    },
+    {
+      title: t('security.card_title6'),
+      text: t('security.card_text6'),
+    },
+  ];
   return (
     <div id="clinical-research" className="container">
       <div className={styles.security}>
         <div className={styles.content}>
-          <h2 className={styles.title}>Ваша безопасность — наш приоритет</h2>
-          <p className={styles.text}>
-            Контрастные препараты проходят строгие тесты на безопасность и
-            эффективность, что обеспечивает спокойствие для пациентов и
-            медицинских работников.
-          </p>
+          <h2 className={styles.title}>{t('security.title')}</h2>
+          <p className={styles.text}>{t('security.desc')}</p>
           <div className={styles.btnwrap}>
             <CustomButton textColor="white" bg="#00707B">
-              Узнать больше
+              {t('hero.btn')}
             </CustomButton>
             <CustomButton textColor="#00707B" bg="white">
-              Связаться с экспертом
+              {t('hero.btn2')}
             </CustomButton>
           </div>
         </div>
@@ -32,7 +55,7 @@ const HomeSecurity = () => {
         {securityCards.map((item, index) => (
           <div className={styles.securityCard} key={index}>
             <div className={styles.securityCardHeader}>
-              <img src={tick} alt="" />
+              <ShieldTick />
               <h3>{item.title}</h3>
             </div>
             <p>{item.text}</p>
@@ -40,38 +63,15 @@ const HomeSecurity = () => {
         ))}
       </div>
       <div className={styles.btnwrap2}>
-        <ButtonPrimary text="Узнать больше" />
-        <ButtonPrimary text="Связаться с экспертом" />
+        <CustomButton textColor="white" bg="#00707B">
+          {t('hero.btn')}
+        </CustomButton>
+        <CustomButton textColor="#00707B" bg="white">
+          {t('hero.btn2')}
+        </CustomButton>
       </div>
     </div>
   );
 };
 
 export default HomeSecurity;
-
-const securityCards = [
-  {
-    title: 'Минимальные риски',
-    text: 'Редкие аллергические реакции, предварительный скрининг.',
-  },
-  {
-    title: 'Современные формулы',
-    text: 'Редкие аллергические реакции, предварительный скрининг.',
-  },
-  {
-    title: 'Контролируемое использование',
-    text: 'Препараты вводятся под наблюдением специалистов',
-  },
-  {
-    title: 'Безопасно для здоровье',
-    text: 'Низкая вероятность побочных эффектов на человека.',
-  },
-  {
-    title: 'Подходят большинству',
-    text: 'Подходят большинству пациентов при проведении скрининга.',
-  },
-  {
-    title: 'Гидратация до и после',
-    text: 'Гидратация до и после процедуры снижает риски.',
-  },
-];

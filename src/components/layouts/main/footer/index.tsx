@@ -1,31 +1,33 @@
 import React from 'react';
 import styles from './footer.module.scss';
-import {
-  YoutubeIcon,
-  InstaIcon,
-  TwitterIcon,
-  LinkedinIcon,
-} from 'src/assets/svg';
+// import {
+//   YoutubeIcon,
+//   InstaIcon,
+//   TwitterIcon,
+//   LinkedinIcon,
+// } from 'src/assets/svg';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const MainLayoutFooter = () => {
+  const { t } = useTranslation();
   return (
     <div className={`${styles.footer} container`}>
       <div className={styles.top}>
         {' '}
         <div className={styles.address}>
-          <p>местоположение</p>
-          <h4>Город Ташкент, улица Шахрисабз 16А</h4>
+          <p>{t('footer.location')}</p>
+          <h4>{t('footer.address')}</h4>
         </div>
         <div className={styles.phone}>
-          <p>Тел.номер:</p>
-          <a href="tel:+998 93 982 50 01">+998 93 982 50 01</a>
+          <p>{t('footer.number')}</p>
+          <a href="tel:+998945550000">+998 94 555 00 00</a>
         </div>
         <div className={styles.email}>
-          <p>Эл.адрес</p>
-          <h4>info@icangroup.uz</h4>
+          <p>{t('footer.email')}</p>
+          <a href="mailto:info@contrasttana.com">info@contrasttana.com</a>
         </div>
-        <div className={styles.socialMedia}>
+        {/* <div className={styles.socialMedia}>
           <p>Социальная сеть</p>
           <div className={styles.social}>
             <Link to="/">
@@ -44,11 +46,11 @@ const MainLayoutFooter = () => {
               <YoutubeIcon />
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
       <hr />
       <div className={styles.bottom}>
-        <p>2023 Barcha huquqlar himoyalangan.</p>
+        <p>{t('footer.policy')}</p>
         <span>
           Design by <Link to="https://www.xcdm.ai/">xcdm.ai</Link>
         </span>

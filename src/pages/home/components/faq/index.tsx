@@ -2,34 +2,33 @@ import { useState } from 'react';
 import styles from './faq.module.scss';
 import { List, Typography, Button } from 'antd';
 import { MinusIcon, PlusIcon } from 'src/assets/svg';
-
-const data = [
-  {
-    question: 'Is there a free trial available?',
-    answer:
-      'Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.',
-  },
-  {
-    question: 'Can I change my plan later?',
-    answer: 'Information about the royal wedding and its significance.',
-  },
-  {
-    question: 'What is your cancellation policy?',
-    answer: 'Story of survival in the harsh outback conditions.',
-  },
-  {
-    question: 'What is your cancellation policy?',
-    answer: 'Investigation details and latest updates.',
-  },
-  {
-    question: 'How do I change my account email?',
-    answer: 'Extent of the damage and response efforts by authorities.',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 const HomeFaq = () => {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
+  const data = [
+    {
+      question: t('faq.question1'),
+      answer: t('faq.answer1'),
+    },
+    {
+      question: t('faq.question2'),
+      answer: t('faq.answer2'),
+    },
+    {
+      question: t('faq.question3'),
+      answer: t('faq.answer3'),
+    },
+    {
+      question: t('faq.question4'),
+      answer: t('faq.answer4'),
+    },
+    {
+      question: t('faq.question5'),
+      answer: t('faq.answer5'),
+    },
+  ];
   const toggleDescription = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -37,7 +36,7 @@ const HomeFaq = () => {
   return (
     <div className={styles.faq}>
       <div className="container">
-        <h2 className={styles.title}>Часто задаваемые вопросы</h2>
+        <h2 className={styles.title}>{t('faq.title')}</h2>
         <List
           dataSource={data}
           renderItem={(item, index) => (
