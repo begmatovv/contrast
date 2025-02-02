@@ -3,6 +3,7 @@ import styles from './contrastAgents.module.scss';
 import img1 from '/src/assets/img/contrast1.png';
 import img2 from '/src/assets/img/contrast2.png';
 import img3 from '/src/assets/img/contrast3.png';
+import images from 'src/constants/images';
 
 const HomeContrastAgents = () => {
   const { t } = useTranslation();
@@ -25,8 +26,8 @@ const HomeContrastAgents = () => {
       <h2 className={styles.title}>{t('contrast.title1')}</h2>
       <p className={styles.text}>{t('contrast.desc')}</p>
       <div className={styles.imgContainer}>
-        <img src="/src/assets/img/medicineBlue.png" alt="" width={618} />
-        <img src="/src/assets/img/medicineWhite.png" alt="" width={618} />
+        <img src={images.contrast_img1} alt="" width={618} />
+        <img src={images.contrast_img2} alt="" width={618} />
       </div>
       <div className={styles.featureCards}>
         {featureCards.map((item, index) => (
