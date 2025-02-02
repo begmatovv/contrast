@@ -4,7 +4,7 @@ import styles from './header.module.scss';
 import useHeader from './useHeader';
 import { CustomButton } from 'src/components/common';
 import btnDropdown from 'src/assets/img/burger.png';
-import { LogoBlue } from 'src/assets/svg';
+import { LogoBlue, LogoWhite } from 'src/assets/svg';
 
 const MainLayoutHeader = () => {
   const { links, isDropdownOpen, toggleDropdown } = useHeader();
@@ -14,6 +14,9 @@ const MainLayoutHeader = () => {
       <div className={styles.header}>
         <div className={styles.logo}>
           <LogoBlue />
+        </div>
+        <div className={styles.logoWhite}>
+          <LogoWhite />
         </div>
 
         {/* Orqa fonni blur qilish */}
