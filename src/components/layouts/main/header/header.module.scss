@@ -1,0 +1,36 @@
+@import 'src/styles/variables.scss';
+.container {
+  max-width: 1680px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 52px;
+  padding-bottom: 41px;
+}
+.menu {
+  display: flex;
+  gap: 30px;
+  li {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    list-style-type: none;
+    .item {
+      color: $primary-text;
+    }
+  }
+}
+.btn {
+  color: $secondary-text;
+  padding: 16px 37px 16px 37px;
+  gap: 8px;
+  opacity: 0px;
+  border-radius: 16px;
+  border: 1px solid $primary;
+  background-color: $primary;
+}

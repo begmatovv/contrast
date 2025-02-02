@@ -1,14 +1,26 @@
-import { Link } from 'react-router-dom';
-import { CustomButton } from 'src/components/common';
+import HomeContrastAgents from './components/contrast';
+import HomeFaq from './components/faq';
+import HomeHero from './components/hero';
+import HomeInfo from './components/info';
+import HomeMore from './components/more';
+import HomeProof from './components/proof';
+import HomeReviews from './components/reviews';
+import HomeSecurity from './components/security';
+import HomeSuperiority from './components/superiority';
 import styles from './home.module.scss';
 
 function Home() {
   return (
     <div className={styles.home}>
-      <h1 className={styles.title}>Home</h1>
-      <Link to="/help">
-        <CustomButton type="primary">Go to help page</CustomButton>
-      </Link>
+      <HomeHero />
+      <HomeContrastAgents />
+      <HomeInfo />
+      <HomeSecurity />
+      <HomeReviews />
+      <HomeProof />
+      <HomeSuperiority />
+      <HomeFaq />
+      <HomeMore/>
     </div>
   );
 }

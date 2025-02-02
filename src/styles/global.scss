@@ -37,11 +37,16 @@ a {
 
 .container {
   max-width: 1280px;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin: 0 auto;
 }
 
 .input {
   outline: none !important;
+}
+body {
+  background-image: url('/src/assets/img/bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
 }

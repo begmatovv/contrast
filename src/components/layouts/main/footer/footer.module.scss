@@ -1,0 +1,113 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; // Allow wrapping for small screens
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  h4,
+  a {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #000;
+  }
+  .email,
+  .phone,
+  .address,
+  .socialMedia {
+    p {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+hr {
+  color: rgba(225, 225, 225, 1);
+  margin-top: 28px;
+  margin-bottom: 15px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; // Allow wrapping for small screens
+}
+
+.social {
+  text-align: center;
+  display: flex;
+  align-items: self-start;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.social a {
+  border-left: 1px solid #e1e1e1;
+  padding-left: 15px;
+}
+
+.social a:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column; // Stack the items vertically
+    align-items: center;
+    text-align: center;
+  }
+
+  .bottom {
+    flex-direction: column; // Stack the items vertically
+    align-items: center;
+    text-align: center;
+  }
+
+  .social {
+    flex-direction: column; // Stack social icons vertically
+    gap: 15px;
+  }
+
+  .social a {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .address, .phone, .email {
+    margin-bottom: 20px; // Add space between the blocks
+  }
+}
+
+@media (max-width: 480px) {
+  .top {
+    padding: 20px; // Add padding for mobile view
+  }
+
+  .bottom {
+    font-size: 14px; // Adjust bottom text size for mobile
+    text-align: center;
+  }
+
+  .social {
+    gap: 10px; // Reduce gap between social icons
+  }
+
+  .social a {
+    padding-left: 10px;
+  }
+
+  .address h4,
+  .phone h4,
+  .email h4 {
+    font-size: 16px; // Smaller font size for h4 on mobile
+  }
+}

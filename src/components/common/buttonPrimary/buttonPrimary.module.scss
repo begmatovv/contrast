@@ -1,0 +1,15 @@
+@import 'src/styles/variables.scss';
+
+.btn {
+  color: $secondary-text;
+  padding: 16px 37px;
+  border-radius: 16px;
+  background-color: $primary;
+  font-family: Manrope;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: center;
+  backdrop-filter: blur(36px);
+  border: 1px solid #ffffff80;
+}

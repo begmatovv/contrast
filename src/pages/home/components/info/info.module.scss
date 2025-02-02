@@ -1,0 +1,120 @@
+@import 'src/styles/variables.scss';
+.info {
+  margin-bottom: 120px;
+}
+.infoHeader {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+.subtitle {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 38px;
+  text-align: left;
+  color: $primary;
+}
+.title {
+  font-family: Inter;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60.51px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.text {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 38px;
+  text-align: left;
+  margin-bottom: 25px;
+}
+.infoCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 21px;
+}
+.infoCard {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 60px 68px 0px rgba(25, 52, 55, 0.1);
+  padding: 25px;
+  p {
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+  }
+}
+.infoCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  h3 {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 33px;
+    text-align: left;
+  }
+}
+@media (max-width: 1100px) {
+  .title {
+    font-size: 48px;
+    margin-bottom: 18px;
+  }
+  .text {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .infoHeader {
+    span {
+      font-size: 22px;
+    }
+  }
+  .infoCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .title {
+    font-size: 44px;
+    margin-bottom: 16px;
+  }
+  .text {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+  .infoHeader {
+    span {
+      font-size: 20px;
+    }
+  }
+  .infoCardHeader {
+    h3 {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+  .infoCard {
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .infoCards {
+    grid-template-columns: 1fr;
+  }
+  .infoCard {
+    padding: 30px;
+  }
+}

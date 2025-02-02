@@ -1,18 +1,14 @@
-import { useEffect } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
-import { scrollToTop } from 'src/utils';
+import { Outlet } from 'react-router-dom';
+import MainLayoutFooter from './footer';
+import MainLayoutHeader from './header';
+import styles from './main.modules.scss';
 
 function Main() {
-  // Scroll to top when route changes
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    scrollToTop();
-  }, [pathname]);
-
   return (
     <div>
+      <MainLayoutHeader />
       <Outlet />
+      <MainLayoutFooter />
     </div>
   );
 }
