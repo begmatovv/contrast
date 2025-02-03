@@ -4,22 +4,6 @@
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 60px;
 }
-.title {
-  font-family: Inter;
-  font-size: 50px;
-  font-weight: 600;
-  line-height: 60px;
-  text-align: left;
-  margin-bottom: 21px;
-}
-.text {
-  font-family: Inter;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 38px;
-  text-align: left;
-  margin-bottom: 34px;
-}
 
 .rightImg {
   margin-left: auto;
@@ -63,7 +47,6 @@
   }
 }
 @media (max-width: 800px) {
-  
   .security {
     grid-template-columns: 1fr;
   }
@@ -86,26 +69,5 @@
   .securityCards {
     grid-template-columns: 1fr;
     margin-bottom: 40px;
-  }
-}
-@media (max-width: 576px) {
-  .title {
-    font-size: 44px;
-    margin-bottom: 18px;
-    line-height: 54px;
-  }
-  .text {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 365px) {
-  .title {
-    font-size: 24px;
-    line-height: 30px;
-  }
-  .text {
-    font-size: 16px;
-    line-height: 26px;
   }
 }

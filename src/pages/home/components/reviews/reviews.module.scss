@@ -1,14 +1,9 @@
 @import 'src/styles/variables.scss';
+
 .review {
   margin-top: 303px;
 }
-.title {
-  font-family: Inter;
-  font-size: 50px;
-  font-weight: 600;
-  line-height: 60.51px;
-  text-align: left;
-}
+
 .reviewCards {
   margin-top: 32px;
   display: flex;
@@ -17,20 +12,33 @@
     border-radius: 20px;
   }
 }
+
 .content {
   border-radius: 20px;
   background-color: $primary;
   color: $secondary-text;
   padding: 40px;
+
   .user {
     display: flex;
     gap: 16px;
     align-items: center;
     margin-bottom: 15px;
+
+    // User image will be hidden by default
+    img {
+      display: none;
+      width: 50px; // Image size adjustment
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
     div {
       display: flex;
       flex-direction: column;
       gap: 5px;
+
       h4 {
         font-family: TT Interfaces;
         font-size: 20px;
@@ -38,6 +46,7 @@
         line-height: 28px;
         text-align: left;
       }
+
       span {
         font-family: TT Interfaces;
         font-size: 16px;
@@ -47,6 +56,7 @@
       }
     }
   }
+
   h3 {
     font-family: Inter;
     font-size: 20px;
@@ -54,6 +64,7 @@
     line-height: 37px;
     text-align: left;
   }
+
   p {
     margin-top: 32px;
     font-family: TT Interfaces;
@@ -64,46 +75,29 @@
     text-align: left;
   }
 }
-@media (max-width: 1100px) {
-  .title {
-    font-size: 48px;
-    margin-bottom: 25px;
-    line-height: 54px;
-  }
-  .content {
-    padding: 35px;
-  }
-}
+
 @media (max-width: 900px) {
   .docImg {
     display: none;
   }
+
   .content {
     padding: 30px;
+    .user {
+      img {
+        display: flex;
+      }
+    }
   }
 }
-@media (max-width: 700px) {
-  .title {
-    font-size: 44px;
-    margin-bottom: 20px;
-    line-height: 50px;
-  }
-  .content {
-    padding: 25px;
-  }
-}
-
 @media (max-width: 365px) {
-  .title {
-    font-size: 24px;
-    line-height: 30px;
-  }
   .content {
-    padding: 20px;
+    padding-bottom: 65px;
     h3 {
       font-size: 16px;
       line-height: 26px;
     }
+
     p {
       font-size: 16px;
     }

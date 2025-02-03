@@ -13,8 +13,8 @@ const HomeMore = () => {
         <div className={styles.moreContainer}>
           {' '}
           <div className={styles.knowMore}>
-            <h2 className={styles.title}>{t('more.title')}</h2>
-            <p className={styles.text}>{t('more.desc')}</p>
+            <h2>{t('more.title')}</h2>
+            <p className="text">{t('more.desc')}</p>
             <div className={styles.btnwrap}>
               {' '}
               <CustomButton bg="#00707B" textColor="white">
@@ -29,7 +29,7 @@ const HomeMore = () => {
         </div>
         <div className={styles.socialMedia}>
           <div className={styles.knowMore}>
-            <p className={styles.text}>{t('more.desc2')}</p>
+            <p className="text">{t('more.desc2')}</p>
             <CustomButton textColor="white" bg="#00707B">
               {t('more.btn4')}
             </CustomButton>

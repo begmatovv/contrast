@@ -1,30 +1,28 @@
 import { useTranslation } from 'react-i18next';
 import images from 'src/constants/images';
 import styles from './contrastAgents.module.scss';
-import img1 from '/src/assets/img/contrast1.png';
-import img2 from '/src/assets/img/contrast2.png';
-import img3 from '/src/assets/img/contrast3.png';
+import { AimIcon, HeartIcon, ServiceIcon } from 'src/assets/svg';
 
 const HomeContrastAgents = () => {
   const { t } = useTranslation();
   const featureCards = [
     {
-      img: { img1 },
+      img: <AimIcon />,
       title: t('contrast.card1'),
     },
     {
-      img: { img2 },
+      img: <HeartIcon />,
       title: t('contrast.card2'),
     },
     {
-      img: { img3 },
+      img: <ServiceIcon />,
       title: t('contrast.card3'),
     },
   ];
   return (
     <div id="about" className={`container ${styles.contrastAgents}`}>
-      <h2 className={styles.title}>{t('contrast.title1')}</h2>
-      <p className={styles.text}>{t('contrast.desc')}</p>
+      <h2>{t('contrast.title1')}</h2>
+      <p className="text">{t('contrast.desc')}</p>
       <div className={styles.imgContainer}>
         <img src={images.contrast_img1} alt="img" width={618} />
         <img src={images.contrast_img2} alt="img" width={618} />
@@ -32,12 +30,7 @@ const HomeContrastAgents = () => {
       <div className={styles.featureCards}>
         {featureCards.map((item, index) => (
           <div className={styles.featureCard} key={index}>
-            <img
-              src={Object.values(item.img)[0]}
-              alt=""
-              width={62}
-              height={62}
-            />
+            <p>{item.img}</p>
             <p>{item.title}</p>
           </div>
         ))}

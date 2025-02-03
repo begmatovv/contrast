@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { Button, Menu, Dropdown } from 'antd';
-import { InstaIcon, LanguageSvg } from 'src/assets/svg';
 import { ArrowDownIcon } from 'src/components/icons';
 
 function LanguageButton() {
@@ -8,7 +7,7 @@ function LanguageButton() {
 
   const handleChange = (lang: string) => {
     i18n.changeLanguage(lang);
-    localStorage.setItem('LANGUAGE', lang); 
+    localStorage.setItem('LANGUAGE', lang);
   };
 
   const menu = (
@@ -21,16 +20,12 @@ function LanguageButton() {
       </Menu.Item>
     </Menu>
   );
-
+  
   return (
     <Dropdown overlay={menu} trigger={['click']} placement="bottomCenter">
-      <Button
-        className="header-top-language header-top-language-dark"
-        type="text"
-        icon={<LanguageSvg />}
-      >
-        <p>{i18n.language === 'ru' ? 'Ру' : 'En'}</p>
-        <ArrowDownIcon />
+      <Button type="text" className='langButton'>
+        <p className="langText">{i18n.language === 'ru' ? 'Русский' : ' English'}</p>
+        <ArrowDownIcon  />
       </Button>
     </Dropdown>
   );

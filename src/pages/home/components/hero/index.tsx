@@ -1,4 +1,4 @@
-import { card, finance, tick } from 'src/assets/svg';
+import { StarIcon, card, finance, tick } from 'src/assets/svg';
 import styles from './hero.module.scss';
 import herostar from 'src/assets/img/herostar.png';
 import { CustomButton } from 'src/components/common';
@@ -16,7 +16,7 @@ const HomeHero = () => {
         <div className="container">
           <div className={styles.herocontainer}>
             <div className={styles.herostar}>
-              <img src={herostar} alt="" width={46} height={46} />
+              <StarIcon/>
               <span>{t('hero.subtitle')}</span>
             </div>
             <h3 className={styles.title}>{t('hero.title1')}</h3>

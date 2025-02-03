@@ -3,6 +3,7 @@ import security from '/src/assets/img/security.png';
 import { CustomButton } from 'src/components/common';
 import { useTranslation } from 'react-i18next';
 import { ShieldTick } from 'src/assets/svg';
+import images from 'src/constants/images';
 const HomeSecurity = () => {
   const { t } = useTranslation();
   const securityCards = [
@@ -35,8 +36,8 @@ const HomeSecurity = () => {
     <div id="clinical-research" className="container">
       <div className={styles.security}>
         <div className={styles.content}>
-          <h2 className={styles.title}>{t('security.title')}</h2>
-          <p className={styles.text}>{t('security.desc')}</p>
+          <h2>{t('security.title')}</h2>
+          <p className="text">{t('security.desc')}</p>
           <div className={styles.btnwrap}>
             <CustomButton textColor="white" bg="#00707B">
               {t('hero.btn')}
@@ -46,9 +47,8 @@ const HomeSecurity = () => {
             </CustomButton>
           </div>
         </div>
-
         <div className={styles.rightImg}>
-          <img src={security} alt="" />
+          <img src={images.security} alt="" />
         </div>
       </div>
       <div className={styles.securityCards}>

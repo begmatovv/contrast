@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import styles from './info.module.scss';
-import star from '/src/assets/img/star.png';
-import { CreditCard } from 'src/assets/svg';
+import { CreditCard, StarIconBlue } from 'src/assets/svg';
 const HomeInfo = () => {
   const { t } = useTranslation();
   const infoCards = [
@@ -22,11 +21,11 @@ const HomeInfo = () => {
     <div id="how-it-works" className="container">
       <div className={styles.info}>
         <div className={styles.infoHeader}>
-          <img src={star} alt="" />
+          <StarIconBlue />
           <span className={styles.subtitle}>{t('feature.subtitle')}</span>
         </div>
-        <h2 className={styles.title}>{t('feature.title')}</h2>
-        <p className={styles.text}>{t('feature.desc')}</p>
+        <h2>{t('feature.title')}</h2>
+        <p className="text">{t('feature.desc')}</p>
         <div className={styles.infoCards}>
           {infoCards.map((item, index) => (
             <div className={styles.infoCard} key={index}>

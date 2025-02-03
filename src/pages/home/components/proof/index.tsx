@@ -21,7 +21,7 @@ const HomeProof = () => {
   return (
     <div className={styles.proof}>
       <div className="container">
-        <h2 className={styles.title}>{t('proof.title')}</h2>
+        <h2>{t('proof.title')}</h2>
         <div className={styles.proofCards}>
           {proofCards.map((item, index) => (
             <div className={styles.proofCard} key={index}>

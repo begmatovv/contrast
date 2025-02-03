@@ -24,7 +24,7 @@ const HomeSuperiority = () => {
   return (
     <div className={styles.superiority}>
       <div className="container">
-        <h2 className={styles.title}>{t('superiority.title')}</h2>
+        <h2>{t('superiority.title')}</h2>
         <div className={styles.superiorityCards}>
           {superiorityCards.map((item, index) => (
             <div className={styles.superiorityCard} key={index}>
