@@ -1,14 +1,23 @@
 import styles from './header.module.scss';
 import useHeader from './useHeader';
 import { CustomButton } from 'src/components/common';
-import { BurgerBtn, LogoBlue, LogoWhite } from 'src/assets/svg';
+import {
+  BurgerBtn,
+  MinusIcon,
+  ArrowDownSvg,
+  LogoBlue,
+  LogoWhite,
+  RemoveIcon,
+} from 'src/assets/svg';
 import LanguageButton from './langButton';
 import { useTranslation } from 'react-i18next';
+import { ArrowCircleDown } from 'iconsax-react';
 const MainLayoutHeader = () => {
-  const { links, isDropdownOpen, toggleDropdown } = useHeader();
+  const { links, toggleDropdown, isDropdownOpen } = useHeader();
   const { t } = useTranslation();
+
   return (
-    <div className="container">
+    <div className={`container ${isDropdownOpen ? 'blurred' : ''}`}>
       <div className={styles.header}>
         <div className={styles.logo}>
           <LogoBlue />
@@ -17,18 +26,9 @@ const MainLayoutHeader = () => {
           <LogoWhite />
         </div>
 
-        <div
-          className={`${styles.overlay} ${isDropdownOpen ? styles.active : ''}`}
-          onClick={() => toggleDropdown()}
-        ></div>
-
-        <button className={styles.menuButton} onClick={() => toggleDropdown()}>
-          <BurgerBtn />
-        </button>
-
-        <ul className={`${styles.menu} ${isDropdownOpen ? styles.open : ''}`}>
+        <ul className={styles.menu}>
           {links.map((link) => (
-            <li key={link.href}>
+            <li key={link.href} className={styles.menuItem}>
               <a
                 href={`#${link.href}`}
                 className={styles.item}
@@ -39,14 +39,62 @@ const MainLayoutHeader = () => {
             </li>
           ))}
         </ul>
+
         <div className={styles.buttonsWrap}>
           <LanguageButton />
           <CustomButton textColor="white" bg="#00707B">
             {t('header.btn')}
           </CustomButton>
         </div>
+
+        <button className={styles.menuButton} onClick={() => toggleDropdown()}>
+          <BurgerBtn />
+        </button>
       </div>
+
+      {/* Dropdown */}
+      {isDropdownOpen && (
+        <div
+          className={`${styles.dropdown} ${styles.smoothTransition}`}
+          onClick={() => toggleDropdown()}
+        >
+          <div
+            className={`${styles.dropdownContent} container`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className={styles.dropdownHeader}>
+              <LogoBlue />
+              <button
+                className={styles.closeButton}
+                onClick={() => toggleDropdown()}
+              >
+                <RemoveIcon />
+              </button>
+            </div>
+            <ul className={styles.dropdownMenu}>
+              {links.map((link) => (
+                <li key={link.href} className={styles.dropdownMenuItem}>
+                  <a
+                    href={`#${link.href}`}
+                    className={styles.dropdownItem}
+                    onClick={() => toggleDropdown()}
+                  >
+                    <span>{link.label}</span>
+                    <ArrowCircleDown className={styles.menuIcon} />
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <div className={styles.dropdownButtons}>
+              <CustomButton textColor="white" bg="#00707B">
+                {t('header.btn')}
+              </CustomButton>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
+
 export default MainLayoutHeader;

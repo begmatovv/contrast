@@ -1,3 +1,20 @@
+export const RemoveIcon = () => (
+  <svg
+    width="40"
+    height="40"
+    viewBox="0 0 40 40"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12.929 12.9289L27.0712 27.071M27.0711 12.9289L12.929 27.071"
+      stroke="#172D33"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
 export const AimIcon = () => (
   <svg
     width="40"
