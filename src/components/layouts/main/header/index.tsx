@@ -8,6 +8,8 @@ import {
   LogoBlue,
   LogoWhite,
   RemoveIcon,
+  LogoMobileBlue,
+  LogoMobileWhite,
 } from 'src/assets/svg';
 import LanguageButton from './langButton';
 import { useTranslation } from 'react-i18next';
@@ -23,7 +25,7 @@ const MainLayoutHeader = () => {
           <LogoBlue />
         </div>
         <div className={styles.logoWhite}>
-          <LogoWhite />
+          <LogoMobileWhite />
         </div>
 
         <ul className={styles.menu}>
@@ -63,7 +65,7 @@ const MainLayoutHeader = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <div className={styles.dropdownHeader}>
-              <LogoBlue />
+              <LogoMobileBlue />
               <button
                 className={styles.closeButton}
                 onClick={() => toggleDropdown()}
