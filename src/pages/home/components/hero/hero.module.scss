@@ -82,38 +82,61 @@
     border-radius: 0px;
   }
   .title {
-    font-size: 38px;
+    font-size: 34px;
+    line-height: 36px;
+  }
+  .text {
+    font-size: 16px;
   }
   .herocontainer {
-    margin-top: 80px;
+    margin-top: 50px;
   }
 }
 @media (max-width: 678px) {
   .buttons {
     flex-direction: column;
   }
-  .title {
-    font-size: 36px;
-  }
   .herostar {
     span {
       font-size: 24px;
     }
   }
+  .features {
+    margin-bottom: 50px;
+    gap: 25px;
+  }
 }
 @media (max-width: 576px) {
   .hero {
     background-image: url('/src/assets/img/tablehero.png');
+    background-position: top;
   }
   .title {
-    font-size: 32px;
+    font-size: 30px;
+    line-height: 32px;
+  }
+  .features {
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+  .text {
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 480px) {
+  .hero {
+    background-image: url('/src/assets/img/heropage.png');
+    background-position: top;
+  }
   .title {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 32px;
   }
+  .features {
+    margin-bottom: 30px;
+    gap: 15px;
+  }
+
   .herostar {
     span {
       font-size: 20px;
@@ -126,6 +149,10 @@
     line-height: 30px;
   }
   .text {
-    font-size: 16px;
+    font-size: 15px;
+  }
+  .features {
+    margin-bottom: 25px;
+    gap: 10px;
   }
 }
