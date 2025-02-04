@@ -27,8 +27,7 @@
 .question {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
+  align-items: flex-start;
   h3 {
     color: #000;
     font-size: 24px;
@@ -47,10 +46,15 @@
   border: none;
   cursor: pointer;
   transition: background 0.3s ease;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
   &:hover {
     background-color: lighten($primary, 10%);
   }
 }
+
 .toggleButton.active {
   background-color: $primary;
 }
@@ -63,15 +67,46 @@
   text-align: left;
   margin-top: 8px;
 }
+@media (max-width: 900px) {
+  .toggleButton {
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .toggleButton {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
 
 @media (max-width: 700px) {
   .question h3 {
     font-size: 22px;
+  }
+  .toggleButton {
+    padding: 12px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
 @media (max-width: 576px) {
   .question h3 {
     font-size: 20px;
+  }
+  .toggleButton {
+    padding: 10px;
+    svg {
+      width: 14px;
+      height: 14px;
+    }
   }
 }
