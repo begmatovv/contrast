@@ -15,21 +15,29 @@ const HomeHero = () => {
       <div className={styles.hero}>
         <div className="container">
           <div className={styles.herocontainer}>
-            <div className={styles.herostar}>
-              <StarIcon/>
+            <div className={styles.herostar} data-aos="zoom-in">
+              <StarIcon />
               <span>{t('hero.subtitle')}</span>
             </div>
-            <h3 className={styles.title}>{t('hero.title1')}</h3>
-            <p className={styles.text}>{t('hero.desc')}</p>
+            <h3 className={styles.title} data-aos="fade-up">
+              {t('hero.title1')}
+            </h3>
+            <p className={styles.text} data-aos="fade-up">
+              {t('hero.desc')}
+            </p>
             <div className={styles.features}>
               {features.map((item, index) => (
-                <div className={styles.feature} key={index}>
+                <div
+                  className={styles.feature}
+                  key={index}
+                  data-aos="fade-right"
+                >
                   <div className={styles.icon}>{item.icon()}</div>
                   <h3 className={styles.title}>{item.title}</h3>
                 </div>
               ))}
             </div>
-            <div className={styles.buttons}>
+            <div className={styles.buttons} data-aos="fade-up">
               <CustomButton
                 bg="white"
                 textColor="#00707B"

@@ -21,17 +21,17 @@ const HomeContrastAgents = () => {
   ];
   return (
     <div id="about" className={`container ${styles.contrastAgents}`}>
-      <h2>{t('contrast.title1')}</h2>
-      <p className="text">{t('contrast.desc')}</p>
+      <h2 data-aos="fade-right">{t('contrast.title1')}</h2>
+      <p data-aos="fade-left" className="text">{t('contrast.desc')}</p>
       <div className={styles.imgContainer}>
-        <img src={images.contrast_img1} alt="img" width={618} />
-        <img src={images.contrast_img2} alt="img" width={618} />
+        <img data-aos="fade-right" src={images.contrast_img1} alt="img" width={618} />
+        <img data-aos="fade-left" src={images.contrast_img2} alt="img" width={618} />
       </div>
       <div className={styles.featureCards}>
         {featureCards.map((item, index) => (
-          <div className={styles.featureCard} key={index}>
-            <p>{item.img}</p>
-            <p>{item.title}</p>
+          <div className={styles.featureCard} key={index} data-aos="fade-up">
+            <p data-aos="fade-up">{item.img}</p>
+            <p data-aos="fade-down">{item.title}</p>
           </div>
         ))}
       </div>

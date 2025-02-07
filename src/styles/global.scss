@@ -51,22 +51,15 @@ body {
 }
 .langButton {
   .langText {
-    font-weight: 500;
+    font-weight: 600;
     text-align: left;
     color: #121212;
-  }
-  @media (max-width: 1000px) {
-    .langText {
-      color: white;
-    }
-    svg {
-      color: white;
-    }
   }
 }
 
 h2 {
-  margin-bottom: 70px;
+  
+  margin-bottom: 21px;
   font-family: Inter;
   font-size: 50px;
   font-weight: 600;

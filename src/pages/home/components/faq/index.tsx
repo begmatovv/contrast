@@ -25,7 +25,11 @@ const HomeFaq = () => {
         <h2 className={styles.title}>{t('faq.title')}</h2>
         <ul className={styles.list}>
           {data.map((item, index) => (
-            <li key={index} className={styles.item}>
+            <li
+              key={index}
+              className={styles.item}
+              onClick={() => toggleDescription(index)}
+            >
               <div className={styles.questionWrapper}>
                 <div className={styles.question}>
                   <div>
@@ -35,7 +39,6 @@ const HomeFaq = () => {
                     )}
                   </div>
                   <button
-                    onClick={() => toggleDescription(index)}
                     className={`${styles.toggleButton} ${openIndex === index ? styles.active : ''}`}
                   >
                     {openIndex === index ? <MinusIcon /> : <PlusIcon />}

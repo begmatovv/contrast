@@ -34,7 +34,6 @@ const HomeMore = () => {
               {t('more.btn4')}
             </CustomButton>
           </div>
-          <img src={img2} alt="" />
         </div>
       </div>
     </div>

@@ -86,32 +86,35 @@ export const languageEn = {
   },
   faq: {
     title: 'Frequently Asked Questions',
-    question1: 'Is there a free trial available?',
+    question1: 'What are medical X-ray films?',
     answer1:
-      'Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.',
-    question2: 'Can I change my plan later?',
-    answer2: 'Information about the royal wedding and its significance.',
-    question3: 'What is your cancellation policy?',
-    answer3: 'Story of survival in the harsh outback conditions.',
-    question4: 'What is your cancellation policy?',
-    answer4: 'Investigation details and latest updates.',
-    question5: 'How do I change my account email?',
-    answer5: 'Extent of the damage and response efforts by authorities.',
+      'Medical X-ray films are specialized image carriers used in radiographic diagnostics to obtain detailed images of a patient’s internal organs and bones.',
+    question2: 'What types of X-ray films exist?',
+    answer2:
+      'You can change your tariff plan at any time by going to settings.',
+    question3: 'How do dry X-ray films differ from traditional ones?',
+    answer3:
+      'You can cancel your subscription at any time before the next billing period without penalties.',
+    question4: 'How to choose the right X-ray film?',
+    answer4:
+      'A refund is possible within 14 days of purchase if you are not satisfied with the service.',
+    question5: 'What factors affect the quality of an X-ray image?',
+    answer5:
+      'You can change your email by going to account settings and updating your contact information.',
   },
   more: {
-   title: 'Want to know more?',
-   desc: 'Take a step towards better imaging and diagnostics.',
-   btn3: 'Download Safety Guide',
-   btn4: 'Subscribe',
-   desc2:
-     'Subscribe to our newsletter to stay updated on the latest news about contrast agents and imaging technologies.',
- },
- footer: {
-   location: 'Location',
-   address: 'Tashkent City, Parkent Street, Mavlono Riyouzi 1a',
-   number: 'Phone number:',
-   email: 'Email address',
-   policy: '2023 All rights reserved',
- },
- 
+    title: 'Want to know more?',
+    desc: 'Take a step towards better imaging and diagnostics.',
+    btn3: 'Download Safety Guide',
+    btn4: 'Subscribe',
+    desc2:
+      'Subscribe to our newsletter to stay updated on the latest news about contrast agents and imaging technologies.',
+  },
+  footer: {
+    location: 'Location',
+    address: 'Tashkent City, Parkent Street, Mavlono Riyouzi 1a',
+    number: 'Phone number:',
+    email: 'Email address',
+    policy: '2023 All rights reserved',
+  },
 };

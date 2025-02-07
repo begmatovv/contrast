@@ -20,7 +20,7 @@ const HomeInfo = () => {
   return (
     <div id="how-it-works" className="container">
       <div className={styles.info}>
-        <div className={styles.infoHeader}>
+        <div className={styles.infoHeader} data-aos="zoom-in">
           <StarIconBlue />
           <span className={styles.subtitle}>{t('feature.subtitle')}</span>
         </div>

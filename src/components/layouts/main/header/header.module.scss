@@ -1,13 +1,11 @@
 @import 'src/styles/variables.scss';
 
-.logoWhite {
-  display: none;
-}
-
+/* General Styles */
 .container.blurred {
   filter: blur(4px);
 }
 
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -15,19 +13,28 @@
   padding: 20px 5px;
 }
 
+/* Logo Styles */
+.logo {
+  display: flex;
+}
+
+.logoWhite {
+  display: none;
+}
+
+/* Menu */
 .menu {
   display: flex;
   align-items: center;
   gap: 24px;
+
   li {
     font-size: 18px;
     font-weight: 500;
-    list-style-type: none;
+    list-style: none;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    // width: 100%;
-    // padding-bottom: 10px;
+
     .item {
       color: $primary-text;
       display: flex;
@@ -37,11 +44,14 @@
   }
 }
 
-.menuIcon {
-  width: 16px;
-  height: 16px;
+/* Buttons */
+.buttonsWrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
+/* Menu Button (Mobile) */
 .menuButton {
   display: none;
   font-size: 24px;
@@ -50,75 +60,44 @@
   cursor: pointer;
 }
 
-.buttonsWrap {
+/* Dropdown Overlay */
+.dropdownWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(26, 37, 41, 0.3); // Light black overlay
+  backdrop-filter: blur(9px); // Blur effect
+  z-index: 999;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 24px;
 }
-
-@media (max-width: 1000px) {
-  .logoWhite {
-    display: flex;
-  }
-  .logo {
-    display: none;
-  }
-
-  .header {
-    width: 93%;
-    position: absolute;
-  }
-
-  .menu {
-    position: absolute;
-    top: 100px;
-    width: 100%;
-    background: white;
-    display: none;
-    flex-direction: column;
-    padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-
-  .menu.open {
-    display: flex;
-  }
-
-  .buttonsWrap {
-    display: none;
-  }
-
-  .menuButton {
-    display: block;
-  }
-}
-
+/* Dropdown Content */
 .dropdown {
-  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 50px;
+  padding: 20px 16px 50px;
   gap: 20px;
   z-index: 1000;
   transition: all 0.3s ease-in-out;
 }
 
 .dropdownHeader {
-  padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   .closeButton {
     display: flex;
-    background-color: inherit;
+    background: none;
     border: none;
   }
 }
@@ -139,12 +118,24 @@
   align-items: center;
   padding: 15px 20px;
   border-bottom: 1px solid #e0e0e0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+.dropdownBtnWrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-around;
+}
+.dropdownButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.dropdownMenuItem:last-child {
-  border-bottom: none;
-}
-
+/* Menu Item Style */
 .dropdownItem {
   width: 100%;
   color: black;
@@ -154,25 +145,66 @@
   align-items: center;
   gap: 10px;
   justify-content: space-between;
-  @media (max-width: 900px) {
-    font-size: 22px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1000px) {
+  .logoWhite {
+    display: flex;
   }
-  @media (max-width: 800px) {
-    font-size: 20px;
+
+  .logo {
+    display: none;
   }
-  @media (max-width: 700px) {
-    font-size: 18px;
+
+  .header {
+    width: 93%;
+    position: absolute;
   }
-  @media (max-width: 600px) {
-    font-size: 16px;
+
+  .menu {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    background: white;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    &.open {
+      display: flex;
+    }
+  }
+
+  .buttonsWrap {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
   }
 }
 
-.dropdownButtons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  &:first-child {
-    background-color: rebeccapurple;
+/* Font Size Responsive Adjustments */
+@media (max-width: 900px) {
+  .dropdownItem {
+    font-size: 22px;
+  }
+}
+@media (max-width: 800px) {
+  .dropdownItem {
+    font-size: 20px;
+  }
+}
+@media (max-width: 700px) {
+  .dropdownItem {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .dropdownItem {
+    font-size: 16px;
   }
 }

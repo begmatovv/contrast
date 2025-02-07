@@ -8,6 +8,7 @@ import styles from './footer.module.scss';
 // } from 'src/assets/svg';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { TelegramIcon, WechatIcon, WhatssapIcon } from 'src/assets/svg';
 
 const MainLayoutFooter = () => {
   const { t } = useTranslation();
@@ -27,26 +28,23 @@ const MainLayoutFooter = () => {
           <p>{t('footer.email')}</p>
           <a href="mailto:info@contrasttana.com">info@contrasttana.com</a>
         </div>
-        {/* <div className={styles.socialMedia}>
+        <div className={styles.socialMedia}>
           <p>Социальная сеть</p>
           <div className={styles.social}>
             <Link to="/">
-              <InstaIcon />
+              {' '}
+              <WechatIcon />
             </Link>
             <Link to="/">
               {' '}
-              <TwitterIcon />
+              <TelegramIcon />
             </Link>
             <Link to="/">
               {' '}
-              <LinkedinIcon />
-            </Link>
-            <Link to="/">
-              {' '}
-              <YoutubeIcon />
+              <WhatssapIcon />
             </Link>
           </div>
-        </div> */}
+        </div>
       </div>
       <hr />
       <div className={styles.bottom}>
