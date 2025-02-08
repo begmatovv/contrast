@@ -36,24 +36,26 @@ const HomeSecurity = () => {
     <div id="clinical-research" className="container">
       <div className={styles.security}>
         <div className={styles.content}>
-          <h2>{t('security.title')}</h2>
-          <p className="text">{t('security.desc')}</p>
+          <h2 data-aos="fade-right">{t('security.title')}</h2>
+          <p data-aos="fade-left" className="text">
+            {t('security.desc')}
+          </p>
           <div className={styles.btnwrap}>
-            <CustomButton textColor="white" bg="#00707B">
+            <CustomButton textColor="white" bg="#00707B" data-aos="zoom-in">
               {t('hero.btn')}
             </CustomButton>
-            <CustomButton textColor="#00707B" bg="white">
+            <CustomButton textColor="#00707B" bg="white" data-aos="zoom-in">
               {t('hero.btn2')}
             </CustomButton>
           </div>
         </div>
-        <div className={styles.rightImg}>
+        <div className={styles.rightImg} data-aos="zoom-out">
           <img src={images.security} alt="" />
         </div>
       </div>
       <div className={styles.securityCards}>
         {securityCards.map((item, index) => (
-          <div className={styles.securityCard} key={index}>
+          <div data-aos="fade-up" className={styles.securityCard} key={index}>
             <div className={styles.securityCardHeader}>
               <ShieldTick />
               <h3>{item.title}</h3>

@@ -24,10 +24,14 @@ const HomeSuperiority = () => {
   return (
     <div className={styles.superiority}>
       <div className="container">
-        <h2>{t('superiority.title')}</h2>
+        <h2 data-aos="fade-right">{t('superiority.title')}</h2>
         <div className={styles.superiorityCards}>
           {superiorityCards.map((item, index) => (
-            <div className={styles.superiorityCard} key={index}>
+            <div
+              data-aos="fade-up"
+              className={styles.superiorityCard}
+              key={index}
+            >
               <div className={styles.superiorityCardHeader}>
                 <HeartTick />
                 <h3>{item.title}</h3>

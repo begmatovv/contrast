@@ -21,13 +21,13 @@ const HomeProof = () => {
   return (
     <div className={styles.proof}>
       <div className="container">
-        <h2>{t('proof.title')}</h2>
+        <h2 data-aos="fade-right">{t('proof.title')}</h2>
         <div className={styles.proofCards}>
           {proofCards.map((item, index) => (
-            <div className={styles.proofCard} key={index}>
+            <div data-aos="fade-up" className={styles.proofCard} key={index}>
               <ScreeningIcon />
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
+              <h3 data-aos="zoom-in">{item.title}</h3>
+              <p data-aos="zoom-in">{item.text}</p>
             </div>
           ))}
         </div>

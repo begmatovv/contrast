@@ -7,12 +7,23 @@ const HomeReviews = () => {
   return (
     <div id="reviews" className={styles.review}>
       <div className="container">
-        <h2>{t('review.title')}</h2>
+        <h2 data-aos="fade-right">{t('review.title')}</h2>
         <div className={styles.reviewCards}>
-          <img className={styles.docImg} src={doc} alt="Doctor" />
-          <div className={styles.content}>
+          <img
+            data-aos="fade-up"
+            className={styles.docImg}
+            src={doc}
+            alt="Doctor"
+          />
+          <div data-aos="fade-down" className={styles.content}>
             <div className={styles.user}>
-              <img className={styles.docImg} src={doc} alt="Doctor"width={72} height={72} />
+              <img
+                className={styles.docImg}
+                src={doc}
+                alt="Doctor"
+                width={72}
+                height={72}
+              />
               <div>
                 <h4>{t('review.name')}</h4>
                 <span>{t('review.job')}</span>

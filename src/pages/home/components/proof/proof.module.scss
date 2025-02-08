@@ -23,13 +23,20 @@
   }
 }
 
-
 @media (max-width: 1000px) {
+  .proof {
+    margin-top: 160px;
+    margin-bottom: 110px;
+  }
   .proofCards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 700px) {
+  .proof {
+    margin-top: 150px;
+    margin-bottom: 100px;
+  }
   .proofCard {
     h3 {
       font-size: 20px;
@@ -42,6 +49,9 @@
   }
 }
 @media (max-width: 576px) {
+  .proof {
+    margin-top: 120px;
+  }
   .proofCard {
     h3 {
       font-size: 18px;
@@ -54,6 +64,9 @@
   }
 }
 @media (max-width: 480px) {
+  .proof {
+    margin-top: 100px;
+  }
   .proofCards {
     grid-template-columns: 1fr;
   }

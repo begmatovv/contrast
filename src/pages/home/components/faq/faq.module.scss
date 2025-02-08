@@ -69,6 +69,10 @@
   margin-top: 8px;
 }
 @media (max-width: 900px) {
+  .faq {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
   .toggleButton {
     svg {
       width: 22px;
@@ -78,6 +82,10 @@
 }
 
 @media (max-width: 800px) {
+  .faq {
+    margin-top: 110px;
+    margin-bottom: 110px;
+  }
   .toggleButton {
     svg {
       width: 20px;
@@ -87,6 +95,10 @@
 }
 
 @media (max-width: 700px) {
+  .faq {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
   .question h3 {
     font-size: 22px;
   }

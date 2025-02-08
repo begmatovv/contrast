@@ -13,24 +13,24 @@ const HomeMore = () => {
         <div className={styles.moreContainer}>
           {' '}
           <div className={styles.knowMore}>
-            <h2>{t('more.title')}</h2>
-            <p className="text">{t('more.desc')}</p>
+            <h2 data-aos="fade-right">{t('more.title')}</h2>
+            <p data-aos="fade-left" className="text">{t('more.desc')}</p>
             <div className={styles.btnwrap}>
               {' '}
-              <CustomButton bg="#00707B" textColor="white">
+              <CustomButton bg="#00707B" textColor="white" data-aos="zoom-in">
                 {t('header.btn')}
               </CustomButton>
-              <CustomButton bg="white" textColor="#00707B">
+              <CustomButton bg="white" textColor="#00707B" data-aos="zoom-in">
                 {t('hero.btn2')}
               </CustomButton>
             </div>
           </div>
-          <img src={img} alt="" height={246} width={246} />
+          <img src={img} alt="" height={246} width={246} data-aos="fade-up" />
         </div>
         <div className={styles.socialMedia}>
           <div className={styles.knowMore}>
-            <p className="text">{t('more.desc2')}</p>
-            <CustomButton textColor="white" bg="#00707B">
+            <p data-aos="fade-left" className="text">{t('more.desc2')}</p>
+            <CustomButton data-aos="zoom-in" textColor="white" bg="#00707B">
               {t('more.btn4')}
             </CustomButton>
           </div>
