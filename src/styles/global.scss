@@ -1,6 +1,5 @@
 @import './variables.scss';
 @import './help.scss';
-
 *,
 :after,
 :before {
@@ -58,7 +57,8 @@ body {
 }
 
 h2 {
-  
+  max-width: 688px;
+  width: 100%;
   margin-bottom: 21px;
   font-family: Inter;
   font-size: 50px;
